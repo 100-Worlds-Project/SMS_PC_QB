@@ -18,42 +18,18 @@ def main_app():
             for widget in results_inner_frame.winfo_children():
                 widget.destroy()
             
-            # Bulk pricing data
-            bulk_pricing = {
-                "Canvas with Thick Gallery Wrap": [24.15, 22.05, 21.00, 19.95, 18.90],
-                "Canvas with Basic Stretch": [24.15, 22.05, 21.00, 19.95, 18.90],
-                "Canvas with Thin Gallery Wrap": [24.15, 22.05, 21.00, 19.95, 18.90],
-                "Photorag": [22.05, 19.95, 18.90, 17.85, 16.80],
-                "Enhanced Matte": [14.50, 12.50, 11.50, 10.50, 9.50],
-                "Watercolor": [23.10, 21.00, 19.95, 18.90, 17.85],
-                "Unstretched Canvas": [24.15, 22.05, 21.00, 19.95, 18.90],
-            }
+            # Bulk pricing data 
+            # pricing information intentionally left blank in repo. If you really need it you know where to get it
+            bulk_pricing = {}
 
-            frame_costs = {
-                "Canvas with Thick Gallery Wrap": 4.99,
-                "Canvas with Thin Gallery Wrap": 4.46,
-                "Canvas with Basic Stretch": 4.46,
-                "Default": 4.99,
-            }
+            frame_costs = {}
 
-            gallery_stretching_fees = {
-                "XS": (0, 36, 31.50),
-                "S": (36, 56, 42.00),
-                "M": (56, 72, 52.50),
-                "L": (72, 100, 63.00),
-                "XL": (100, float("inf"), 73.50),
-            }
+            gallery_stretching_fees = {}
 
-            basic_stretching_fees = {
-                "XS": (0, 36, 21.00),
-                "S": (36, 56, 31.50),
-                "M": (56, 72, 42.00),
-                "L": (72, 100, 52.50),
-                "XL": (100, float("inf"), 63.00),
-            }
+            basic_stretching_fees = {}
 
-            bracer_bar_cost = 4.46
-            upcharge_72 = 150.00
+            bracer_bar_cost = 
+            upcharge_72 = 
 
             row = 0
             color_index = 0
