@@ -1,3 +1,5 @@
+### This is the old code. This is just the calculator GUI, no QBO integration
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 
