@@ -1,32 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-pip install requests requests_oauthlib python-dotenv
-
-
-# In[2]:
-
-
-pip install dotenv
-
-
-# In[3]:
-
-
-pip install python-docx
-
-
-# In[4]:
-
-
-pip install docx2pdf
-
-
-# In[5]:
-
 
 import logging
 from datetime import datetime
