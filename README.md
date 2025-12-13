@@ -16,4 +16,4 @@ QuickBooks Online invoices via the Intuit API.
    ```bash
    pip install -r requirements.txt
 3. Download the draft invoice word doc to same dir as everything else. (Note: This program requires current version of MS Word).
-4. Download 'SMS Pricing Calculator vs QB_019.py' and run. Input correct/test information as needed (bulk_pricing dictionary, volume discounts starting at line 2235, prices in send_to_draft, current path for draft invoice (line 1269))
+4. Download 'SMS Pricing Calculator vs QB_019.py' and run. Input correct/test information as needed (bulk_pricing dictionary, volume discounts starting at line 2235, prices in send_to_draft, current path for draft invoice (line 1269)) NOTE: Without information filled in the program will not run. This is to keep pricing information from being discovered by competitors.
