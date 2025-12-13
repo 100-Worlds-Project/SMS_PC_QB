@@ -364,8 +364,8 @@ def send_to_draft(d):
             "print_type": "✨ Specialty Capture",
             "size": "",
             "num_prints": 1,
-            "regular_price": 30.00,
-            "pro_price": 30.00,
+            "regular_price": 0.00, #pricing info intentinoally removed
+            "pro_price": 0.00, #pricing info intentinoally removed
             "canvas_cost": 0.00,
             "pro_canvas_cost": 0.00,
             "frame_cost": 0.00,
@@ -384,11 +384,11 @@ def send_to_draft(d):
             return
         max_dim = max(d["original_height"], d["original_width"])
         if max_dim < 48:
-            label, price = "🎨 Basic Color Match", 80.00
+            label, price = "🎨 Basic Color Match", 0.00 #pricing info intentinoally removed
         elif max_dim < 72:
-            label, price = "🎨 Basic Color Match – 48\"+", 95.00
+            label, price = "🎨 Basic Color Match – 48\"+", 0.00 #pricing info intentinoally removed
         else:
-            label, price = "🎨 Basic Color Match – 72\"+", 120.00
+            label, price = "🎨 Basic Color Match – 72\"+", 0.00 #pricing info intentinoally removed
 
         draft_items.append({
             "print_type": label,
@@ -413,8 +413,8 @@ def send_to_draft(d):
             "print_type": "🖥️ Monitor Match",
             "size": "",
             "num_prints": 1,
-            "regular_price": 50.00,
-            "pro_price": 50.00,
+            "regular_price": 0.00, #pricing info intentinoally removed
+            "pro_price": 0.00, #pricing info intentinoally removed
             "canvas_cost": 0.00,
             "pro_canvas_cost": 0.00,
             "frame_cost": 0.00,
@@ -432,8 +432,8 @@ def send_to_draft(d):
             "print_type": "🐩 Complex Image Wrap",
             "size": "",
             "num_prints": 1,
-            "regular_price": 15.00,
-            "pro_price": 15.00,
+            "regular_price": 0.00, #pricing info intentinoally removed
+            "pro_price": 0.00, #pricing info intentinoally removed
             "canvas_cost": 0.00,
             "pro_canvas_cost": 0.00,
             "frame_cost": 0.00,
@@ -453,8 +453,8 @@ def send_to_draft(d):
             "print_type": "💻 Additional Color Match Rounds",
             "size": "",
             "num_prints": rounds,
-            "regular_price": 30.00,
-            "pro_price": 30.00,
+            "regular_price": 0.00, #pricing info intentinoally removed
+            "pro_price": 0.00, #pricing info intentinoally removed
             "canvas_cost": 0.00,
             "pro_canvas_cost": 0.00,
             "frame_cost": 0.00,
@@ -472,8 +472,8 @@ def send_to_draft(d):
             "print_type": "💿 Flashdrive",
             "size": "",
             "num_prints": count,
-            "regular_price": 10.00,
-            "pro_price": 10.00,
+            "regular_price": 0.00, #pricing info intentinoally removed
+            "pro_price": 0.00, #pricing info intentinoally removed
             "canvas_cost": 0.00,
             "pro_canvas_cost": 0.00,
             "frame_cost": 0.00,
@@ -491,8 +491,8 @@ def send_to_draft(d):
             "print_type": "🕖 Computer Time",
             "size": "",
             "num_prints": rounded_hours,
-            "regular_price": 100.00,
-            "pro_price": 100.00,
+            "regular_price": 0.00, #pricing info intentinoally removed
+            "pro_price": 0.00, #pricing info intentinoally removed
             "canvas_cost": 0.00,
             "pro_canvas_cost": 0.00,
             "frame_cost": 0.00,
@@ -2232,24 +2232,24 @@ def main_app():
 
 
                 
-            if height is not None and width is not None and num_prints is not None:
+            if height is not None and width is not None and num_prints is not None: # actual volume discount quantities removed intentionally
                 for print_type, prices in bulk_pricing.items():
-                    if num_prints <= 4:
+                    if num_prints <= 0:
                         price_per_sqft = prices[0]
                         pro_price_per_sqft = prices[1]
                         pro_discount = (price_per_sqft - pro_price_per_sqft)
                         volume_discount = 0.00
-                    elif num_prints <= 19:
+                    elif num_prints <= 0:
                         price_per_sqft = prices[1]
                         pro_price_per_sqft = prices[2]
                         pro_discount = (price_per_sqft - pro_price_per_sqft)
                         volume_discount = (prices[1] - prices[0])
-                    elif num_prints <= 49:
+                    elif num_prints <= 0:
                         price_per_sqft = prices[2]
                         pro_price_per_sqft = prices[3]
                         pro_discount = (price_per_sqft - pro_price_per_sqft)
                         volume_discount = (prices[2] - prices[1])
-                    elif num_prints <= 99:
+                    elif num_prints <= 0:
                         price_per_sqft = prices[3]
                         pro_price_per_sqft = prices[4]
                         pro_discount = (price_per_sqft - pro_price_per_sqft)
